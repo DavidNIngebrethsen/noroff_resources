@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .tank {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .bullet {
+        background-color: white;
+        width: 10%;
+        height: 10%;
+      }
+
+      .tank-body {
+        width: 100%;
+        height: 100%;
+        background-color: #54c144;
+        clip-path: polygon(
+          0 0,
+          80% 0%,
+          80% 25%,
+          60% 25%,
+          60% 40%,
+          100% 40%,
+          100% 60%,
+          60% 60%,
+          60% 75%,
+          80% 75%,
+          80% 100%,
+          0 100%,
+          0 75%,
+          20% 75%,
+          20% 20%,
+          0 20%
+        );
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding: 0;
+        margin: 0;
+        width: 95vw;
+        height: 95vh;
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+        border: 20px solid #54c144;
+        background-color: black;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.5fr;
+        padding: 40px;
+        width: 90%;
+        height: 90%;
+        background-color: black;
+        gap: 10%;
+      }
+      .of-3 {
+        background-color: #c74e4e;
+      }
+      .high {
+        background-color: #c74e4e;
+        grid-row-start: 1;
+        grid-row-end: span 3;
+        grid-column-start: 3;
+        grid-column-end: 3;
+      }
+      .wide {
+        grid-row-start: 2;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        background-color: #c74e4e;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="grid">
+        <div class="of-3">1</div>
+        <div class="of-3">2</div>
+        <div class="high">3</div>
+        <div class="wide">4</div>
+        <div class="tank">
+          <div class="tank-body"></div>
+          <div class="bullet"></div>
+          <div class="bullet"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
