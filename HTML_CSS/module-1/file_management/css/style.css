@@ -1,3 +1,10 @@
-* {
-    color: orangered;
+h1{
+    font-size: 42px;
+    color: firebrick;
+}
+#txt-red {
+    color: red;
+}
+.blue {
+    color: blue;
 }

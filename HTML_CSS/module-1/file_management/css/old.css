@@ -1,0 +1,10 @@
+img {
+    max-width: 90%;
+    width: 640px;
+  }
+  .container {
+    background-image: url(../images/klippe.jpg);
+    padding: 160px;
+    background-size: cover;
+    margin: 40px;
+  }
